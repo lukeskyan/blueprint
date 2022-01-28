@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% from 'bootstrap/form.html' import render_form %}
+
+{% block content %}
+  {% include 'components/notification.html' %}
+  <a href="{{ url_for('index') }}" class="btn btn-info btn-sm">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    Voltar
+  </a>
+  {{ render_form(form) }}
+{% endblock %}
